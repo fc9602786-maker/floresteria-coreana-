@@ -1,0 +1,487 @@
+/*==================================================
+                    RESET GENERAL
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#FFF8F5;
+    overflow-x:hidden;
+
+}
+
+/*==================================================
+            CONTENEDOR PRINCIPAL
+==================================================*/
+
+.container{
+
+    width:95%;
+    max-width:1250px;
+    margin:110px auto 30px;
+
+}
+
+/*==================================================
+                    HEADER
+==================================================*/
+
+header{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:9999;
+    background:#FFD6C9;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+
+}
+
+/*==================================================
+                    NAVBAR
+==================================================*/
+
+.navbar{
+
+    width:95%;
+    max-width:1250px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 0;
+
+}
+
+/*==================================================
+                    LOGO
+==================================================*/
+
+.logo{
+
+    text-decoration:none;
+    font-size:28px;
+    font-weight:bold;
+    color:#B76E79;
+    transition:.3s;
+
+}
+
+.logo:hover{
+
+    color:#8A4F7D;
+
+}
+
+/*==================================================
+            BOTÓN HAMBURGUESA
+==================================================*/
+
+.menu-toggle{
+
+    display:none;
+    background:none;
+    border:none;
+    font-size:35px;
+    cursor:pointer;
+    color:#B76E79;
+    transition:.3s;
+
+}
+
+.menu-toggle:hover{
+
+    transform:scale(1.1);
+
+}
+
+/*==================================================
+                    MENÚ
+==================================================*/
+
+.menu{
+
+    list-style:none;
+    display:flex;
+    align-items:center;
+    gap:35px;
+
+}
+
+.menu li{
+
+    list-style:none;
+
+}
+
+.menu li a{
+
+    text-decoration:none;
+    color:#6B4C4C;
+    font-size:18px;
+    font-weight:bold;
+    padding:10px 15px;
+    border-radius:12px;
+    transition:.35s;
+
+}
+
+.menu li a:hover{
+
+    background:#F8C8DC;
+    color:#fff;
+
+}
+
+/*==================================================
+                    BANNER
+==================================================*/
+
+.banner{
+
+    width:100%;
+    height:350px;
+    overflow:hidden;
+    border-radius:20px;
+    margin-bottom:40px;
+    box-shadow:0 8px 18px rgba(0,0,0,.18);
+
+}
+
+.banner img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+
+}
+
+.banner:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/*==================================================
+                    TÍTULO
+==================================================*/
+
+.titulo{
+
+    text-align:center;
+    margin-bottom:40px;
+
+}
+
+.titulo h1{
+
+    color:#B76E79;
+    font-size:40px;
+    margin-bottom:15px;
+
+}
+
+.titulo p{
+
+    color:#666;
+    font-size:18px;
+    line-height:1.8;
+    max-width:800px;
+    margin:auto;
+
+}
+
+/*==================================================
+                    GALERÍA
+==================================================*/
+
+.galeria{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-bottom:50px;
+
+}
+
+.foto{
+
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,.15);
+    transition:.4s;
+
+}
+
+.foto:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.foto img{
+
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    display:block;
+    transition:.5s;
+
+}
+
+.foto:hover img{
+
+    transform:scale(1.08);
+
+}
+/*==================================================
+                    FOOTER
+==================================================*/
+
+footer{
+
+    background:#FFD6C9;
+    color:#6B4C4C;
+    text-align:center;
+    padding:35px 20px;
+    border-radius:20px 20px 0 0;
+    box-shadow:0 -3px 12px rgba(0,0,0,.10);
+
+}
+
+footer h3{
+
+    margin-bottom:10px;
+    font-size:24px;
+
+}
+
+footer p{
+
+    margin:8px 0;
+    line-height:1.8;
+
+}
+
+/*==================================================
+                ANIMACIONES
+==================================================*/
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+.banner,
+.titulo,
+.foto{
+
+    animation:aparecer .8s ease;
+
+}
+
+/*==================================================
+            RESPONSIVE TABLET
+==================================================*/
+
+@media screen and (max-width:1023px){
+
+    .galeria{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .foto img{
+
+        height:260px;
+
+    }
+
+}
+
+/*==================================================
+            RESPONSIVE CELULAR
+==================================================*/
+
+@media screen and (max-width:767px){
+
+    .container{
+
+        margin-top:100px;
+
+    }
+
+    .navbar{
+
+        flex-wrap:wrap;
+        padding:15px;
+
+    }
+
+    .logo{
+
+        font-size:24px;
+
+    }
+
+    .menu-toggle{
+
+        display:block;
+
+    }
+
+    .menu{
+
+        display:none;
+        flex-direction:column;
+        width:100%;
+        margin-top:15px;
+        gap:0;
+        background:#FFD6C9;
+        border-radius:15px;
+        overflow:hidden;
+
+    }
+
+    .menu.activo{
+
+        display:flex;
+
+    }
+
+    .menu li{
+
+        width:100%;
+
+    }
+
+    .menu li a{
+
+        display:block;
+        text-align:center;
+        padding:15px;
+        border-bottom:1px solid rgba(255,255,255,.4);
+
+    }
+
+    .banner{
+
+        height:220px;
+
+    }
+
+    .titulo h1{
+
+        font-size:30px;
+
+    }
+
+    .titulo p{
+
+        font-size:16px;
+
+    }
+
+    .galeria{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .foto img{
+
+        height:250px;
+
+    }
+
+    footer{
+
+        padding:25px 15px;
+
+    }
+
+    footer h3{
+
+        font-size:20px;
+
+    }
+
+    footer p{
+
+        font-size:15px;
+
+    }
+
+}
+
+/*==================================================
+        PANTALLAS GRANDES
+==================================================*/
+
+@media screen and (min-width:1440px){
+
+    .container{
+
+        max-width:1400px;
+
+    }
+
+    .navbar{
+
+        max-width:1400px;
+
+    }
+
+    .banner{
+
+        height:420px;
+
+    }
+
+    .galeria{
+
+        grid-template-columns:repeat(4,1fr);
+
+    }
+
+    .foto img{
+
+        height:280px;
+
+    }
+
+    .titulo h1{
+
+        font-size:46px;
+
+    }
+
+}
