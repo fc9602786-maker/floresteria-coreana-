@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto | Sweet Haru</title>
+
+    <link rel="stylesheet" href="css/contacto.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!--=========================================
+                HEADER
+==========================================-->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+
+            🌸 Sweet Haru
+
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle">
+
+            ☰
+
+        </button>
+
+        <ul class="menu" id="menu">
+
+            <li><a href="index.html">🏠 Inicio</a></li>
+
+            <li><a href="Nosotros.html">🌸 Nosotros</a></li>
+
+            <li><a href="Tienda.html">💐 Tienda</a></li>
+
+            <li><a href="Galeria.html">🖼️ Galería</a></li>
+
+            <li><a href="Contacto.html">📞 Contacto</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<!--=========================================
+                BANNER
+==========================================-->
+
+<section class="banner">
+
+    <img src="img/principalbann.png" alt="Contacto Sweet Haru">
+
+</section>
+
+<!--=========================================
+                TÍTULO
+==========================================-->
+
+<section class="titulo">
+
+    <h1>📞 Contáctanos</h1>
+
+    <p>
+
+        Estamos listos para ayudarte a elegir el arreglo floral perfecto.
+        Completa el siguiente formulario y nos pondremos en contacto contigo
+        lo antes posible.
+
+    </p>
+
+</section>
+
+<!--=========================================
+            FORMULARIO
+==========================================-->
+
+<section class="contacto">
+
+    <div class="formulario">
+
+        <h2>🌸 Realiza tu Pedido</h2>
+
+        <form action="#" method="post">
+
+            <label for="nombre">Nombre Completo</label>
+
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Ingrese su nombre"
+                required>
+
+            <label for="correo">Correo Electrónico</label>
+
+            <input
+                type="email"
+                id="correo"
+                name="correo"
+                placeholder="Ingrese su correo"
+                required>
+
+            <label for="telefono">Teléfono</label>
+
+            <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="Ingrese su teléfono">
+
+            <label for="producto">Producto de interés</label>
+
+            <input
+                type="text"
+                id="producto"
+                name="producto"
+                placeholder="Ejemplo: Ramo Primavera">
+
+            <label for="mensaje">Mensaje</label>
+
+            <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="6"
+                placeholder="Escriba aquí su mensaje..."
+                required></textarea>
+                            <div class="botones">
+
+                <button type="submit">
+
+                    📩 Enviar Pedido
+
+                </button>
+
+                <button type="reset">
+
+                    🗑️ Limpiar
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <!--=========================================
+            INFORMACIÓN DE CONTACTO
+    ==========================================-->
+
+    <div class="informacion">
+
+        <h2>🌷 Información de Contacto</h2>
+
+        <p><strong>📍 Dirección:</strong> San Salvador, El Salvador</p>
+
+        <p><strong>📞 Teléfono:</strong> +503 7000-0000</p>
+
+        <p><strong>📧 Correo:</strong> contacto@sweetharu.com</p>
+
+        <p><strong>🕒 Horario:</strong> Lunes a Sábado de 8:00 a.m. a 6:00 p.m.</p>
+
+        <p>
+
+            Gracias por confiar en <strong>Sweet Haru</strong>. Será un placer
+            ayudarte a crear un detalle inolvidable.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!--=========================================
+                FOOTER
+==========================================-->
+
+<footer>
+
+    <h3>🌸 Sweet Haru | Florería</h3>
+
+    <p>
+
+        Gracias por visitar nuestra página de contacto.
+        Estamos listos para atenderte y ayudarte a encontrar
+        el arreglo floral perfecto.
+
+    </p>
+
+    <p>
+
+        © 2026 Sweet Haru. Todos los derechos reservados.
+
+    </p>
+
+</footer>
+
+</div>
+
+<!--=========================================
+        SCRIPT MENÚ HAMBURGUESA
+==========================================-->
+
+<script>
+
+const menuToggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+menuToggle.addEventListener("click", () => {
+
+    menu.classList.toggle("activo");
+
+    if(menu.classList.contains("activo")){
+
+        menuToggle.innerHTML = "✕";
+
+    }else{
+
+        menuToggle.innerHTML = "☰";
+
+    }
+
+});
+
+const enlaces = document.querySelectorAll(".menu a");
+
+enlaces.forEach(enlace =>{
+
+    enlace.addEventListener("click", () =>{
+
+        menu.classList.remove("activo");
+
+        menuToggle.innerHTML = "☰";
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>

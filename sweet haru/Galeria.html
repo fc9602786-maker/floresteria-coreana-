@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Galería | Sweet Haru</title>
+
+    <link rel="stylesheet" href="css/galeria.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!--=========================================
+                HEADER
+==========================================-->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+
+            🌸 Sweet Haru
+
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle">
+
+            ☰
+
+        </button>
+
+        <ul class="menu" id="menu">
+
+            <li><a href="index.html">🏠 Inicio</a></li>
+
+            <li><a href="Nosotros.html">🌸 Nosotros</a></li>
+
+            <li><a href="Tienda.html">💐 Tienda</a></li>
+
+            <li><a href="Galeria.html">🖼️ Galería</a></li>
+
+            <li><a href="Contacto.html">📞 Contacto</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<!--=========================================
+                BANNER
+==========================================-->
+
+<section class="banner">
+
+    <img src="img/principalbann.png" alt="Galería Sweet Haru">
+
+</section>
+
+<!--=========================================
+                TÍTULO
+==========================================-->
+
+<section class="titulo">
+
+    <h1>🖼️ Nuestra Galería</h1>
+
+    <p>
+
+        Descubre algunos de nuestros arreglos florales elaborados
+        con inspiración coreana, delicadeza y mucho amor.
+
+    </p>
+
+</section>
+
+<!--=========================================
+                GALERÍA
+==========================================-->
+
+<section class="galeria">
+
+    <div class="foto">
+
+        <img src="img/inicio1.jpg" alt="Arreglo Floral">
+
+    </div>
+
+    <div class="foto">
+
+        <img src="img/inicio2.jpg" alt="Arreglo Floral">
+
+    </div>
+
+    <div class="foto">
+
+        <img src="img/inicio3.jpg" alt="Arreglo Floral">
+
+    </div>
+
+    <div class="foto">
+
+        <img src="img/inicio4.jpg" alt="Arreglo Floral">
+
+    </div>
+
+    <div class="foto">
+
+        <img src="img/inicio5.jpg" alt="Arreglo Floral">
+
+    </div>
+
+    <div class="foto">
+
+        <img src="img/inicio6.jpg" alt="Arreglo Floral">
+
+    </div>
+        <div class="foto">
+
+        <img src="img/inicio7.jpg" alt="Arreglo Floral">
+
+    </div>
+
+    <div class="foto">
+
+        <img src="img/inicio8.jpg" alt="Arreglo Floral">
+
+    </div>
+
+    <div class="foto">
+
+        <img src="img/inicio9.jpg" alt="Arreglo Floral">
+
+    </div>
+
+    <div class="foto">
+
+        <img src="img/yo.jpg" alt="Arreglo Floral">
+
+    </div>
+
+    <div class="foto">
+
+        <img src="img/loto6.jpg" alt="Arreglo Floral">
+
+    </div>
+
+    <div class="foto">
+
+        <img src="img/nnosotros.jpg" alt="Arreglo Floral">
+
+    </div>
+
+</section>
+
+<!--=========================================
+                FOOTER
+==========================================-->
+
+<footer>
+
+    <h3>🌸 Sweet Haru | Florería</h3>
+
+    <p>
+
+        Gracias por visitar nuestra galería.
+        Cada arreglo floral está elaborado con dedicación,
+        creatividad y mucho amor.
+
+    </p>
+
+    <p>
+
+        © 2026 Sweet Haru. Todos los derechos reservados.
+
+    </p>
+
+</footer>
+
+</div>
+
+<!--=========================================
+        SCRIPT MENÚ HAMBURGUESA
+==========================================-->
+
+<script>
+
+const menuToggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+menuToggle.addEventListener("click", () => {
+
+    menu.classList.toggle("activo");
+
+    if(menu.classList.contains("activo")){
+
+        menuToggle.innerHTML = "✕";
+
+    }else{
+
+        menuToggle.innerHTML = "☰";
+
+    }
+
+});
+
+const enlaces = document.querySelectorAll(".menu a");
+
+enlaces.forEach(enlace =>{
+
+    enlace.addEventListener("click", () =>{
+
+        menu.classList.remove("activo");
+
+        menuToggle.innerHTML = "☰";
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>
