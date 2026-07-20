@@ -14,9 +14,15 @@ html{
 }
 
 body{
-
-    background:#FFF8F5;
+    background-image:
+    linear-gradient(rgba(255,255,255,.45),rgba(255,255,255,.45)),
+    url("../img/nosotros13.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
     overflow-x:hidden;
+    color:#555;
 
 }
 

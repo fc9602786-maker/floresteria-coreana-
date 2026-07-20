@@ -11,10 +11,13 @@
 
     <link rel="stylesheet" href="css/contacto.css">
 
+    <link rel="icon" href="img/flor.png">
+
 </head>
 
 <body>
 
+<div class="petalos"></div>
 <div class="container">
 
 <!--=========================================
@@ -61,7 +64,8 @@
 
 <section class="banner">
 
-    <img src="img/principalbann.png" alt="Contacto Sweet Haru">
+    <img src="img/principalbann.png"
+         alt="Sweet Haru Contacto">
 
 </section>
 
@@ -71,119 +75,367 @@
 
 <section class="titulo">
 
-    <h1>📞 Contáctanos</h1>
+    <h1>🌸 Realiza tu Pedido</h1>
 
     <p>
 
-        Estamos listos para ayudarte a elegir el arreglo floral perfecto.
-        Completa el siguiente formulario y nos pondremos en contacto contigo
-        lo antes posible.
+        Gracias por elegir <strong>Sweet Haru</strong>.
+        Completa el siguiente formulario y prepararemos un
+        arreglo floral especial para esa persona importante.
 
     </p>
 
 </section>
 
 <!--=========================================
-            FORMULARIO
+            CONTACTO
 ==========================================-->
 
 <section class="contacto">
 
-    <div class="formulario">
+<div class="formulario">
 
-        <h2>🌸 Realiza tu Pedido</h2>
+<h2>💐 Formulario de Pedido</h2>
 
-        <form action="#" method="post">
+<form action="https://formsubmit.co/fc9602786@gmail.com" method="POST">
 
-            <label for="nombre">Nombre Completo</label>
+<!-- CONFIGURACIÓN FORMSUBMIT -->
 
-            <input
-                type="text"
-                id="nombre"
-                name="nombre"
-                placeholder="Ingrese su nombre"
-                required>
+<input type="hidden" name="_subject" value="🌸 Nuevo Pedido Sweet Haru">
 
-            <label for="correo">Correo Electrónico</label>
+<input type="hidden" name="_captcha" value="false">
 
-            <input
-                type="email"
-                id="correo"
-                name="correo"
-                placeholder="Ingrese su correo"
-                required>
+<input type="hidden" name="_template" value="table">
 
-            <label for="telefono">Teléfono</label>
+<input
+type="hidden"
+name="_autoresponse"
+value="¡Hola! 🌸 Hemos recibido tu pedido correctamente. Muy pronto nos pondremos en contacto contigo. Gracias por confiar en Sweet Haru.">
 
-            <input
-                type="tel"
-                id="telefono"
-                name="telefono"
-                placeholder="Ingrese su teléfono">
+<!-- DATOS DEL CLIENTE -->
 
-            <label for="producto">Producto de interés</label>
+<label for="nombre">
 
-            <input
-                type="text"
-                id="producto"
-                name="producto"
-                placeholder="Ejemplo: Ramo Primavera">
+👤 Nombre Completo
 
-            <label for="mensaje">Mensaje</label>
+</label>
 
-            <textarea
-                id="mensaje"
-                name="mensaje"
-                rows="6"
-                placeholder="Escriba aquí su mensaje..."
-                required></textarea>
-                            <div class="botones">
+<input
+type="text"
+id="nombre"
+name="Nombre"
+placeholder="Ingrese su nombre completo"
+required>
 
-                <button type="submit">
+<label for="correo">
 
-                    📩 Enviar Pedido
+📧 Correo Electrónico
 
-                </button>
+</label>
 
-                <button type="reset">
+<input
+type="email"
+id="correo"
+name="Correo"
+placeholder="ejemplo@gmail.com"
+required>
 
-                    🗑️ Limpiar
+<label for="telefono">
 
-                </button>
+📱 Teléfono
 
-            </div>
+</label>
 
-        </form>
+<input
+type="tel"
+id="telefono"
+name="Telefono"
+placeholder="0000-0000"
+required>
 
-    </div>
+<label for="direccion">
 
-    <!--=========================================
-            INFORMACIÓN DE CONTACTO
-    ==========================================-->
+📍 Dirección de entrega
 
-    <div class="informacion">
+</label>
 
-        <h2>🌷 Información de Contacto</h2>
+<input
+type="text"
+id="direccion"
+name="Direccion"
+placeholder="Ingrese la dirección"
+required>
 
-        <p><strong>📍 Dirección:</strong> San Salvador, El Salvador</p>
+<label for="producto">
 
-        <p><strong>📞 Teléfono:</strong> +503 7000-0000</p>
+💐 Producto
 
-        <p><strong>📧 Correo:</strong> contacto@sweetharu.com</p>
+</label>
 
-        <p><strong>🕒 Horario:</strong> Lunes a Sábado de 8:00 a.m. a 6:00 p.m.</p>
+<select
+id="producto"
+name="Producto"
+required>
 
-        <p>
+<option value="">Seleccione un producto</option>
 
-            Gracias por confiar en <strong>Sweet Haru</strong>. Será un placer
-            ayudarte a crear un detalle inolvidable.
+<option>Ramo Primavera</option>
 
-        </p>
+<option>Rosas Pastel</option>
 
-    </div>
+<option>Tulipanes</option>
+
+<option>Caja Floral</option>
+
+<option>Lirios Blancos</option>
+
+<option>Girasoles</option>
+
+<option>Ramo Elegancia</option>
+
+<option>Rosas Blancas</option>
+
+<option>Bouquet Premium</option>
+
+<option>Orquídeas</option>
+
+<option>Canasta Floral</option>
+
+<option>Ramo Sweet Haru</option>
+
+</select>
+<!--=========================================
+        FECHA DE ENTREGA
+==========================================-->
+
+<label for="fecha">
+
+📅 Fecha de entrega
+
+</label>
+
+<input
+type="date"
+id="fecha"
+name="Fecha de entrega"
+required>
+
+<!--=========================================
+        HORA DE ENTREGA
+==========================================-->
+
+<label for="hora">
+
+⏰ Hora de entrega
+
+</label>
+
+<input
+type="time"
+id="hora"
+name="Hora de entrega"
+required>
+
+<!--=========================================
+        TIPO DE ENTREGA
+==========================================-->
+
+<label for="entrega">
+
+🚚 Tipo de entrega
+
+</label>
+
+<select
+id="entrega"
+name="Tipo de entrega"
+required>
+
+<option value="">Seleccione una opción</option>
+
+<option>Entrega a domicilio</option>
+
+<option>Recoger en tienda</option>
+
+</select>
+
+<!--=========================================
+        MÉTODO DE PAGO
+==========================================-->
+
+<label for="pago">
+
+💳 Método de pago
+
+</label>
+
+<select
+id="pago"
+name="Método de pago"
+required>
+
+<option value="">Seleccione una opción</option>
+
+<option>Efectivo</option>
+
+<option>Transferencia bancaria</option>
+
+<option>Pago contra entrega</option>
+
+</select>
+
+<!--=========================================
+        PRESUPUESTO
+==========================================-->
+
+<label for="presupuesto">
+
+💵 Presupuesto aproximado
+
+</label>
+
+<select
+id="presupuesto"
+name="Presupuesto">
+
+<option>Menos de $20</option>
+
+<option>$20 - $35</option>
+
+<option>$35 - $50</option>
+
+<option>Más de $50</option>
+
+</select>
+
+<!--=========================================
+        MENSAJE PARA LA TARJETA
+==========================================-->
+
+<label for="tarjeta">
+
+💌 Mensaje para la tarjeta
+
+</label>
+
+<textarea
+id="tarjeta"
+name="Mensaje para la tarjeta"
+rows="4"
+placeholder="Ejemplo: Feliz cumpleaños, te deseo lo mejor..."></textarea>
+
+<!--=========================================
+        COMENTARIOS
+==========================================-->
+
+<label for="mensaje">
+
+📝 Comentarios adicionales
+
+</label>
+
+<textarea
+id="mensaje"
+name="Comentarios"
+rows="6"
+placeholder="Escriba aquí cualquier detalle adicional del pedido..."
+required></textarea>
+
+<!--=========================================
+        BOTONES
+==========================================-->
+
+<div class="botones">
+
+<button type="submit">
+
+🌸 Enviar Pedido
+
+</button>
+
+<button type="reset">
+
+🗑️ Limpiar Formulario
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+<!--=========================================
+        INFORMACIÓN DE CONTACTO
+==========================================-->
+
+<div class="informacion">
+
+<h2>🌷 Sweet Haru</h2>
+
+<p>
+
+<strong>📍 Dirección:</strong><br>
+San Salvador, El Salvador
+
+</p>
+
+<p>
+
+<strong>📞 Teléfono:</strong><br>
++503 7000-0000
+
+</p>
+
+<p>
+
+<strong>📧 Correo:</strong><br>
+contacto@sweetharu.com
+
+</p>
+
+<p>
+
+<strong>🕗 Horario:</strong><br>
+Lunes a Sábado<br>
+8:00 a.m. - 6:00 p.m.
+
+</p>
+
+<hr>
+
+<h3>🌸 ¿Por qué comprar con nosotros?</h3>
+
+<p>✅ Flores frescas todos los días.</p>
+
+<p>✅ Diseños inspirados en el estilo coreano.</p>
+
+<p>✅ Atención personalizada.</p>
+
+<p>✅ Entregas rápidas y seguras.</p>
+
+<p>✅ Ramos elaborados con mucho cariño.</p>
+
+<hr>
+
+<h3>💖 Redes Sociales</h3>
+
+<p>📷 Instagram: @SweetHaru</p>
+
+<p>📘 Facebook: Sweet Haru</p>
+
+<p>🎵 TikTok: @SweetHaru</p>
+
+<p>
+
+Gracias por confiar en nosotros.
+Será un placer ayudarte a sorprender a alguien especial.
+
+</p>
+
+</div>
 
 </section>
-
 <!--=========================================
                 FOOTER
 ==========================================-->
@@ -193,17 +445,17 @@
     <h3>🌸 Sweet Haru | Florería</h3>
 
     <p>
-
-        Gracias por visitar nuestra página de contacto.
-        Estamos listos para atenderte y ayudarte a encontrar
-        el arreglo floral perfecto.
-
+        Gracias por confiar en Sweet Haru.
+        Cada arreglo floral es preparado con dedicación,
+        elegancia y mucho cariño.
     </p>
 
     <p>
+        🌷 Hacemos de cada detalle un momento inolvidable.
+    </p>
 
+    <p>
         © 2026 Sweet Haru. Todos los derechos reservados.
-
     </p>
 
 </footer>
@@ -223,46 +475,52 @@ menuToggle.addEventListener("click", () => {
 
     menu.classList.toggle("activo");
 
-    if(menu.classList.contains("activo")){
-
-        menuToggle.innerHTML = "✕";
-
-    }else{
-
-        menuToggle.innerHTML = "☰";
-
-    }
+    menuToggle.innerHTML = menu.classList.contains("activo")
+        ? "✕"
+        : "☰";
 
 });
 
-const enlaces = document.querySelectorAll(".menu a");
+document.querySelectorAll(".menu a").forEach(enlace=>{
 
-enlaces.forEach(enlace =>{
-
-    enlace.addEventListener("click", () =>{
+    enlace.addEventListener("click",()=>{
 
         menu.classList.remove("activo");
-
-        menuToggle.innerHTML = "☰";
+        menuToggle.innerHTML="☰";
 
     });
 
 });
 
 </script>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6a597b7703ec7a1d4cd027b3/1jtmokigi';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+
+<!--=========================================
+    CONFIRMACIÓN DEL PEDIDO
+==========================================-->
+
+<script>
+
+const formulario = document.querySelector("form");
+
+formulario.addEventListener("submit", function(e){
+
+    const confirmar = confirm(
+`🌸 Sweet Haru
+
+¿Desea enviar este pedido?
+
+Al presionar "Aceptar" su solicitud será enviada y recibiremos su pedido por correo electrónico.`);
+
+    if(!confirmar){
+
+        e.preventDefault();
+
+    }
+
+});
+
 </script>
-<!--End of Tawk.to Script-->
+<script src="js/petalos.js"></script>
 </body>
-</script>
+
 </html>

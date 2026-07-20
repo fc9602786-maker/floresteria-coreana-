@@ -14,10 +14,15 @@ html{
 }
 
 body{
-
-    background:#FFF8F5;
+    background-image:
+    linear-gradient(rgba(255,255,255,.45),rgba(255,255,255,.45)),
+    url("../img/inicio13.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
     overflow-x:hidden;
-
+    color:#555;
 }
 
 /*==================================================
@@ -37,19 +42,12 @@ body{
 ==================================================*/
 
 header{
-
     position:fixed;
-
     top:0;
-
     left:0;
-
     width:100%;
-
     z-index:9999;
-
     background:#FFD6C9;
-
     box-shadow:0 4px 15px rgba(0,0,0,.15);
 
 }
