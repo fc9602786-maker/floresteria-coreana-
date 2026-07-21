@@ -17,7 +17,12 @@
 
 <body>
 
+<!--=========================================
+        PÉTALOS DE SAKURA
+==========================================-->
+
 <div class="petalos"></div>
+
 <div class="container">
 
 <!--=========================================
@@ -97,22 +102,38 @@
 
 <h2>💐 Formulario de Pedido</h2>
 
-<form action="https://formsubmit.co/fc9602786@gmail.com" method="POST">
+<form
+id="formularioPedido"
+action="https://formsubmit.co/fc9602786@gmail.com"
+method="POST">
 
-<!-- CONFIGURACIÓN FORMSUBMIT -->
+<!--=========================================
+        CONFIGURACIÓN FORMSUBMIT
+==========================================-->
 
-<input type="hidden" name="_subject" value="🌸 Nuevo Pedido Sweet Haru">
+<input
+type="hidden"
+name="_subject"
+value="🌸 Nuevo Pedido Sweet Haru">
 
-<input type="hidden" name="_captcha" value="false">
+<input
+type="hidden"
+name="_captcha"
+value="false">
 
-<input type="hidden" name="_template" value="table">
+<input
+type="hidden"
+name="_template"
+value="table">
 
 <input
 type="hidden"
 name="_autoresponse"
 value="¡Hola! 🌸 Hemos recibido tu pedido correctamente. Muy pronto nos pondremos en contacto contigo. Gracias por confiar en Sweet Haru.">
 
-<!-- DATOS DEL CLIENTE -->
+<!--=========================================
+        DATOS DEL CLIENTE
+==========================================-->
 
 <label for="nombre">
 
@@ -204,6 +225,7 @@ required>
 <option>Ramo Sweet Haru</option>
 
 </select>
+
 <!--=========================================
         FECHA DE ENTREGA
 ==========================================-->
@@ -340,24 +362,23 @@ name="Comentarios"
 rows="6"
 placeholder="Escriba aquí cualquier detalle adicional del pedido..."
 required></textarea>
-
 <!--=========================================
         BOTONES
 ==========================================-->
 
 <div class="botones">
 
-<button type="submit">
+    <button type="submit">
 
-🌸 Enviar Pedido
+        🌸 Enviar Pedido
 
-</button>
+    </button>
 
-<button type="reset">
+    <button type="reset">
 
-🗑️ Limpiar Formulario
+        🗑️ Limpiar Formulario
 
-</button>
+    </button>
 
 </div>
 
@@ -371,71 +392,122 @@ required></textarea>
 
 <div class="informacion">
 
-<h2>🌷 Sweet Haru</h2>
+    <h2>🌷 Sweet Haru</h2>
 
-<p>
+    <p>
 
-<strong>📍 Dirección:</strong><br>
-San Salvador, El Salvador
+        <strong>📍 Dirección:</strong><br>
+        San Salvador, El Salvador
 
-</p>
+    </p>
 
-<p>
+    <p>
 
-<strong>📞 Teléfono:</strong><br>
-+503 7000-0000
+        <strong>📞 Teléfono:</strong><br>
+        +503 7000-0000
 
-</p>
+    </p>
 
-<p>
+    <p>
 
-<strong>📧 Correo:</strong><br>
-contacto@sweetharu.com
+        <strong>📧 Correo:</strong><br>
+        contacto@sweetharu.com
 
-</p>
+    </p>
 
-<p>
+    <p>
 
-<strong>🕗 Horario:</strong><br>
-Lunes a Sábado<br>
-8:00 a.m. - 6:00 p.m.
+        <strong>🕗 Horario:</strong><br>
+        Lunes a Sábado<br>
+        8:00 a.m. - 6:00 p.m.
 
-</p>
+    </p>
 
-<hr>
+    <hr>
 
-<h3>🌸 ¿Por qué comprar con nosotros?</h3>
+    <h3>🌸 ¿Por qué comprar con nosotros?</h3>
 
-<p>✅ Flores frescas todos los días.</p>
+    <p>✅ Flores frescas todos los días.</p>
 
-<p>✅ Diseños inspirados en el estilo coreano.</p>
+    <p>✅ Diseños inspirados en el estilo coreano.</p>
 
-<p>✅ Atención personalizada.</p>
+    <p>✅ Atención personalizada.</p>
 
-<p>✅ Entregas rápidas y seguras.</p>
+    <p>✅ Entregas rápidas y seguras.</p>
 
-<p>✅ Ramos elaborados con mucho cariño.</p>
+    <p>✅ Ramos elaborados con mucho cariño.</p>
 
-<hr>
+    <hr>
 
-<h3>💖 Redes Sociales</h3>
+    <h3>💖 Redes Sociales</h3>
 
-<p>📷 Instagram: @SweetHaru</p>
+    <p>📷 Instagram: @SweetHaru</p>
 
-<p>📘 Facebook: Sweet Haru</p>
+    <p>📘 Facebook: Sweet Haru</p>
 
-<p>🎵 TikTok: @SweetHaru</p>
+    <p>🎵 TikTok: @SweetHaru</p>
 
-<p>
+    <p>
 
-Gracias por confiar en nosotros.
-Será un placer ayudarte a sorprender a alguien especial.
+        Gracias por confiar en nosotros.
+        Será un placer ayudarte a sorprender a alguien especial.
 
-</p>
+    </p>
 
 </div>
 
 </section>
+
+<!--=========================================
+        VENTANA DE CONFIRMACIÓN
+==========================================-->
+
+<div class="modal" id="modalPedido">
+
+    <div class="modal-contenido">
+
+        <div class="icono-modal">
+
+            🌸
+
+        </div>
+
+        <h2>
+
+            ¡Pedido enviado con éxito!
+
+        </h2>
+
+        <p>
+
+            Gracias por confiar en <strong>Sweet Haru</strong>.
+
+        </p>
+
+        <p>
+
+            Hemos recibido tu pedido correctamente y ya se encuentra
+            en proceso.
+
+        </p>
+
+        <p>
+
+            Muy pronto nos pondremos en contacto contigo para confirmar
+            todos los detalles.
+
+        </p>
+
+        <button id="cerrarModal">
+
+            Aceptar 💖
+
+        </button>
+
+    </div>
+
+</div>
+
 <!--=========================================
                 FOOTER
 ==========================================-->
@@ -445,25 +517,44 @@ Será un placer ayudarte a sorprender a alguien especial.
     <h3>🌸 Sweet Haru | Florería</h3>
 
     <p>
+
         Gracias por confiar en Sweet Haru.
         Cada arreglo floral es preparado con dedicación,
         elegancia y mucho cariño.
+
     </p>
 
     <p>
+
         🌷 Hacemos de cada detalle un momento inolvidable.
+
     </p>
 
     <p>
+
         © 2026 Sweet Haru. Todos los derechos reservados.
+
     </p>
 
 </footer>
 
 </div>
+<!--=========================================
+        EMAILJS
+==========================================-->
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+emailjs.init({
+    publicKey:"LkjogAHe7Eey66acp"
+});
+
+</script>
 
 <!--=========================================
-        SCRIPT MENÚ HAMBURGUESA
+        MENÚ HAMBURGUESA
 ==========================================-->
 
 <script>
@@ -471,13 +562,14 @@ Será un placer ayudarte a sorprender a alguien especial.
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
 
-menuToggle.addEventListener("click", () => {
+menuToggle.addEventListener("click",()=>{
 
     menu.classList.toggle("activo");
 
-    menuToggle.innerHTML = menu.classList.contains("activo")
-        ? "✕"
-        : "☰";
+    menuToggle.innerHTML =
+    menu.classList.contains("activo")
+    ? "✕"
+    : "☰";
 
 });
 
@@ -486,6 +578,7 @@ document.querySelectorAll(".menu a").forEach(enlace=>{
     enlace.addEventListener("click",()=>{
 
         menu.classList.remove("activo");
+
         menuToggle.innerHTML="☰";
 
     });
@@ -495,32 +588,328 @@ document.querySelectorAll(".menu a").forEach(enlace=>{
 </script>
 
 <!--=========================================
-    CONFIRMACIÓN DEL PEDIDO
+        ENVÍO DEL FORMULARIO
 ==========================================-->
 
 <script>
 
-const formulario = document.querySelector("form");
+const formulario=document.getElementById("formularioPedido");
 
-formulario.addEventListener("submit", function(e){
+const modal=document.getElementById("modalPedido");
 
-    const confirmar = confirm(
+const cerrar=document.getElementById("cerrarModal");
+
+formulario.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const confirmar=confirm(
+
 `🌸 Sweet Haru
 
-¿Desea enviar este pedido?
+¿Deseas enviar tu pedido?
 
-Al presionar "Aceptar" su solicitud será enviada y recibiremos su pedido por correo electrónico.`);
+Presiona "Aceptar" para continuar.`);
 
     if(!confirmar){
 
-        e.preventDefault();
+        return;
+
+    }
+
+    emailjs.sendForm(
+
+        "service_8go258t",
+
+        "template_321oyrq",
+
+        formulario
+
+    )
+
+    .then(()=>{
+
+        modal.classList.add("mostrar");
+
+        formulario.reset();
+
+    })
+
+    .catch(()=>{
+
+        alert(
+
+"❌ Ocurrió un error al enviar el pedido."
+
+        );
+
+    });
+
+});
+
+cerrar.addEventListener("click",()=>{
+
+    modal.classList.remove("mostrar");
+
+});
+
+window.addEventListener("click",(e)=>{
+
+    if(e.target===modal){
+
+        modal.classList.remove("mostrar");
 
     }
 
 });
 
 </script>
+
+<!--=========================================
+        SCRIPT PÉTALOS
+==========================================-->
+
 <script src="js/petalos.js"></script>
+
+<!--=========================================
+        TAWK.TO
+==========================================-->
+
+<script type="text/javascript">
+
+var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();
+
+(function(){
+
+var s1=document.createElement("script"),
+s0=document.getElementsByTagName("script")[0];
+
+s1.async=true;
+
+s1.src="https://embed.tawk.to/6a597b7703ec7a1d4cd027b3/1jtmokigi";
+
+s1.charset="UTF-8";
+
+s1.setAttribute("crossorigin","*");
+
+s0.parentNode.insertBefore(s1,s0);
+
+})();
+
+</script>
+
 </body>
 
+</html>
+<!--=========================================
+        INFORMACIÓN DE CONTACTO
+==========================================-->
+
+<section class="info-contacto">
+
+    <div class="contacto-box">
+
+        <h2>Visítanos en Sweet Haru 🌸</h2>
+
+        <p>
+            Creamos arreglos florales inspirados en la delicadeza
+            coreana, con diseños elegantes y personalizados.
+        </p>
+
+        <div class="datos-contacto">
+
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Ubicación</h3>
+                <p>San Salvador, El Salvador</p>
+            </div>
+
+
+            <div>
+                <i class="fa-solid fa-phone"></i>
+                <h3>Teléfono</h3>
+                <p>+503 0000-0000</p>
+            </div>
+
+
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <h3>Email</h3>
+                <p>sweetharu@email.com</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!--=========================================
+                MAPA
+==========================================-->
+
+<section class="mapa">
+
+    <h2>Encuéntranos</h2>
+
+    <iframe
+    src="https://www.google.com/maps/embed"
+    loading="lazy">
+    </iframe>
+
+</section>
+
+
+
+<!--=========================================
+                FOOTER
+==========================================-->
+
+<footer class="footer">
+
+
+    <div class="footer-contenido">
+
+
+        <div class="footer-logo">
+
+            <h2>Sweet Haru 🌸</h2>
+
+            <p>
+                Flores con inspiración coreana
+                hechas con amor y creatividad.
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <h3>Enlaces</h3>
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="nosotros.html">
+                Nosotros
+            </a>
+
+            <a href="tienda.html">
+                Tienda
+            </a>
+
+            <a href="contacto.html">
+                Contacto
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-redes">
+
+            <h3>Síguenos</h3>
+
+
+            <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+
+            <a href="#">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="footer-final">
+
+        <p>
+            © 2026 Sweet Haru | Todos los derechos reservados 🌸
+        </p>
+
+    </div>
+
+
+</footer>
+
+
+
+<!--=========================================
+            BOTÓN SUBIR ARRIBA
+==========================================-->
+
+<button id="btn-arriba">
+
+    ↑
+
+</button>
+
+
+
+<!--=========================================
+        PETALOS DE SAKURA
+==========================================-->
+
+<div class="petalos"></div>
+
+
+
+<!--=========================================
+            SCRIPTS
+==========================================-->
+
+
+<script src="js/petalos.js"></script>
+
+
+<script src="https://kit.fontawesome.com/TU_CODIGO.js"
+crossorigin="anonymous">
+</script>
+
+
+
+<!--=========================================
+            TAWK.TO
+==========================================-->
+
+<script type="text/javascript">
+
+var Tawk_API = Tawk_API || {},
+Tawk_LoadStart = new Date();
+
+(function(){
+
+var s1=document.createElement("script"),
+s0=document.getElementsByTagName("script")[0];
+
+s1.async=true;
+
+s1.src='https://embed.tawk.to/TU_ID/default';
+
+s1.charset='UTF-8';
+
+s1.setAttribute('crossorigin','*');
+
+s0.parentNode.insertBefore(s1,s0);
+
+})();
+
+</script>
+</body>
 </html>
