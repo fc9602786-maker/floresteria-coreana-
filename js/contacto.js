@@ -1,15 +1,13 @@
 /*==================================================
-        MENU HAMBURGUESA
+        MENÚ HAMBURGUESA
 ==================================================*/
-
 
 const botonMenu = document.querySelector(".menu-toggle");
 const menu = document.querySelector(".menu");
 
+if (botonMenu && menu) {
 
-if(botonMenu){
-
-    botonMenu.addEventListener("click",()=>{
+    botonMenu.addEventListener("click", () => {
 
         menu.classList.toggle("activo");
 
@@ -17,115 +15,113 @@ if(botonMenu){
 
 }
 
-
-
 /*==================================================
         BOTÓN SUBIR ARRIBA
 ==================================================*/
 
-
 const btnArriba = document.querySelector("#btn-arriba");
 
+if (btnArriba) {
 
-window.addEventListener("scroll",()=>{
+    window.addEventListener("scroll", () => {
 
+        if (window.scrollY > 300) {
 
-    if(window.scrollY > 300){
+            btnArriba.style.display = "block";
 
-        btnArriba.style.display="block";
+        } else {
 
-    }else{
+            btnArriba.style.display = "none";
 
-        btnArriba.style.display="none";
+        }
 
-    }
+    });
 
-
-});
-
-
-
-if(btnArriba){
-
-
-    btnArriba.addEventListener("click",()=>{
-
+    btnArriba.addEventListener("click", () => {
 
         window.scrollTo({
 
-            top:0,
-
-            behavior:"smooth"
+            top: 0,
+            behavior: "smooth"
 
         });
 
-
     });
 
-
 }
-
-
 
 /*==================================================
-        EMAILJS FORMULARIO
+        FORMULARIO EMAILJS
 ==================================================*/
 
+const formulario = document.querySelector("#formularioPedido");
 
-const formulario = document.querySelector("#formulario-contacto");
+const modal = document.querySelector("#modalPedido");
 
+const cerrarModal = document.querySelector("#cerrarModal");
 
-if(formulario){
+if (formulario) {
 
+    formulario.addEventListener("submit", function (e) {
 
-formulario.addEventListener("submit",function(e){
+        e.preventDefault();
 
+        emailjs.sendForm(
 
-    e.preventDefault();
+            "service_8go258t",
+            "template_321oyrq",
+            this
 
+        )
 
+        .then(() => {
 
-    emailjs.sendForm(
+            formulario.reset();
 
-        "TU_SERVICE_ID",
+            if (modal) {
 
-        "TU_TEMPLATE_ID",
+                modal.classList.add("mostrar");
 
-        this
+            }
 
+        })
 
-    )
+        .catch((error) => {
 
-    .then(()=>{
+            console.error("Error EmailJS:", error);
 
+            alert(
+`❌ No fue posible enviar el pedido.
 
-        alert(
-        "🌸 Gracias por contactar a Sweet Haru. Tu mensaje fue enviado correctamente."
-        );
+Revisa la consola (F12) para conocer el error.`
+            );
 
-
-        formulario.reset();
-
-
-
-    })
-
-    .catch((error)=>{
-
-
-        console.log(error);
-
-
-        alert(
-        "❌ Ocurrió un error al enviar el mensaje."
-        );
-
+        });
 
     });
 
+}
 
+/*==================================================
+        CERRAR MODAL
+==================================================*/
 
-});
+if (cerrarModal) {
 
+    cerrarModal.addEventListener("click", () => {
+
+        modal.classList.remove("mostrar");
+
+    });
 
 }
+
+window.addEventListener("click", (e) => {
+
+    if (e.target === modal) {
+
+        modal.classList.remove("mostrar");
+
+    }
+
+});
